@@ -1,0 +1,14 @@
+--- 
+  - name: Installing httpd Apache Web Server
+    host: linoop
+    tasks: 
+
+      - name: Install httpd service
+        yum: 
+          name: httpd
+          state: installed
+
+      - name: Start httpd verice 
+        service: 
+          name: httpd
+          state: started
